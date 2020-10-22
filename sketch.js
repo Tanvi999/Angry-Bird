@@ -9,6 +9,7 @@ var pig,pig2;
 var log1,log2,log3,log4;
 var bird;
 var back;
+var platform;
 
 function preload()
 {
@@ -21,6 +22,8 @@ function setup()
     engine = Engine.create();
     world = engine.world;
     ground = new Ground(600,height-10,1200,20);
+    platform = new Ground(150,380,300,200);
+    console.log(platform);
 
     //level 1
     box1 = new Box(700,480,70,70);
@@ -50,6 +53,7 @@ function draw()
     box1.display();
     box2.display();
     ground.display();
+    platform.display();
     pig.display();
     log1.display();
 
